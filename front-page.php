@@ -1,110 +1,50 @@
 <?php get_header();?>
 
 <div class="container-fluid">
-  
-  <div id="ft-img" class="section container-fluid mb-2"></div>
-      
-      <div id="services" class="section row mb-2">
         
-      <div class="col-sm-4">
-      <!-- Card One -->
-        <div class="card card-cascade narrower">
+  <?php
+    $args = array(
+        'post_type' => 'services',
+        'posts_per_page' => 3,
 
-          <!-- Card image -->
-          <div class="view view-cascade overlay">
-            <img  class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" alt="Card image cap">
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
+    );
+    $allServices = new WP_Query($args);
+  ?>
 
-          <!-- Card content -->
-          <div class="card-body card-body-cascade">
-
-            <!-- Label -->
-            <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
-            <!-- Title -->
-            <h4 class="font-weight-bold card-title">Cheat day inspirations</h4>
-            <!-- Text -->
-            <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
-          </div>
-          
-          <!-- Card footer -->
-          <div class="card-footer text-muted text-center">
-            2 days ago
+  <?php if( $allServices->have_posts() ): ?>
+    <div class="row mb-5">
+      <?php while( $allServices->have_posts() ): $allServices->the_post(); ?>
+        <div class="col">
+          <div class="card card-cascade narrower">
+            <div class="card-body card-body-cascade">
+              <h3 class="card-title"><?php the_title(); ?></h3>
+              <div class="">
+                <?php the_content();?>
+              </div>
+              <a class="btn btn-info btn-block" href="<?php the_permalink(); ?>">View Service</a>
+            </div>
           </div>
         </div>
-        <!-- Card One End -->
-      </div>
+      <?php endwhile; ?>
+    </div>
+  <?php endif; ?>
 
-      <div class="col-sm-4">
-      <!-- Card Two -->
-        <div class="card card-cascade narrower">
 
-          <!-- Card image -->
-          <div class="view view-cascade overlay">
-            <img  class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" alt="Card image cap">
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
 
-          <!-- Card content -->
-          <div class="card-body card-body-cascade">
 
-            <!-- Label -->
-            <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
-            <!-- Title -->
-            <h4 class="font-weight-bold card-title">Cheat day inspirations</h4>
-            <!-- Text -->
-            <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
-          </div>
-          
-          <!-- Card footer -->
-          <div class="card-footer text-muted text-center">
-            2 days ago
-          </div>
-        </div>
-        <!-- Card Two End -->
-      </div>
 
-      <div class="col-sm-4">
-      <!-- Card Three -->
-        <div class="card card-cascade narrower">
 
-          <!-- Card image -->
-          <div class="view view-cascade overlay">
-            <img  class="card-img-top" src="https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg" alt="Card image cap">
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
-          </div>
 
-          <!-- Card content -->
-          <div class="card-body card-body-cascade">
 
-            <!-- Label -->
-            <h5 class="pink-text pb-2 pt-1"><i class="fas fa-utensils"></i> Culinary</h5>
-            <!-- Title -->
-            <h4 class="font-weight-bold card-title">Cheat day inspirations</h4>
-            <!-- Text -->
-            <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi.</p>
-          </div>
-          
-          <!-- Card footer -->
-          <div class="card-footer text-muted text-center">
-            2 days ago
-          </div>
-        </div>
-        <!-- Card Three End -->
-      </div>
-      
-    </div> 
-    <!-- Services Section Ends -->
+
+
+
+
+
     
     <!-- Testimononial Section Starts -->
     <div class="section">
-      <div id="ft-img" class="section container-fluid"></div>
+      <!-- <div id="ft-img" class="section container-fluid"></div> -->
     </div>
 
     <div class="section">

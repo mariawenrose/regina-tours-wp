@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-$primaryColour: rgb(86, 202, 86);
+$primaryColour: rgb(97, 141, 97);
 
 h1 {
   color: $primaryColour;
@@ -14,4 +14,9 @@ h1 {
 #ft-img {
   height: 350px;
   background-color: aquamarine;
+}
+
+#custom-header {
+  height: 350px;
+  width: auto;
 }

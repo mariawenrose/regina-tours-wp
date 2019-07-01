@@ -5,12 +5,17 @@
 }
 
 h1 {
-  color: #56ca56;
+  color: #618d61;
 }
 
 #ft-img {
   height: 350px;
   background-color: aquamarine;
+}
+
+#custom-header {
+  height: 350px;
+  width: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,14 +17,14 @@ function add_services_post_type(){
 		'not_found_in_trash' 		=> __( 'No services found in Trash.', 'Regina Tours Israel' )
 	);
     $args = array(
-        'labels' 						=> $labels,
-        'description' 			=> 'A list of services which will be held',
-        'public' 						=> true,
-        'show_in_nav_menus' => false,
-        'menu_position' 		=> 6,
-        'show_in_rest' 			=> true,
+        'labels' 					=> $labels,
+        'description' 				=> 'A list of services which will be held',
+        'public' 					=> true,
+        'show_in_nav_menus' 		=> false,
+        'menu_position' 			=> 6,
+        'show_in_rest' 				=> true,
         'menu_icon' 				=> 'dashicons-admin-post',
-        'supports' 					=> array('title', 'editor')
+        'supports' 					=> array('title', 'editor','thumbnail')
     );
     register_post_type('services', $args);
 }

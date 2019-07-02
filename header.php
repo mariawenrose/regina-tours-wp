@@ -9,13 +9,13 @@
 <body <?php body_class();?>>
 
 
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark default-color custom_nav" role="navigation">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark custom_nav" role="navigation">
   <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Navbar</a>
+  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <?php
     wp_nav_menu( array(
       'theme_location'    => 'top_navigation_bar',

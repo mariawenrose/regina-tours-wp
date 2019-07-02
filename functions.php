@@ -15,19 +15,20 @@ function custom_theme_setup() {
   add_theme_support('menus');
   add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'video'));
 
-  
   register_nav_menu('top_navigation_bar', 'Custom Top Nav');
 }
 add_action('init', 'custom_theme_setup');
 add_theme_support( 'custom-logo' );
 add_theme_support('custom-header');
 
+//Gutenberg Blocks
+add_theme_support( 'wp-block-styles' );
+add_theme_support('post-thumbnails');
+
 require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 //Custom Post Types
 require get_template_directory() . '/inc/custom-post-types/cpt-services.php';
 require get_template_directory() . '/inc/custom-post-types/cpt-testimonials.php';
+require get_template_directory() . '/inc/customizer.php';
 
-
-add_theme_support( 'wp-block-styles' );
-add_theme_support('post-thumbnails');

@@ -12,31 +12,26 @@
   ?>
 
   <?php if( $allServices->have_posts() ): ?>
-    <div class="row mb-5">
+    <div class="row mb-3">
       <?php while( $allServices->have_posts() ): $allServices->the_post(); ?>
         <div class="col">
           <div class="card card-cascade narrower">
             <div class="card-body card-body-cascade">
+              <div class="view wiew-cascade overlay">
+                <?php if(has_post_thumbnail()): ?>
+                <?php the_post_thumbnail('medium', ['class'=>'serive-image card-img-top img-fluid mb-2', 'alt' =>'thumbnail image for the post']); ?>
+                <?php endif; ?>
+              </div>
               <h3 class="card-title"><?php the_title(); ?></h3>
-              <div class="">
+              <div class="card-text">
                 <?php the_content();?>
               </div>
-              <a class="btn btn-info btn-block" href="<?php the_permalink(); ?>">View Service</a>
             </div>
           </div>
         </div>
       <?php endwhile; ?>
     </div>
   <?php endif; ?>
-
-
-
-
-
-
-
-
-
 
 
 

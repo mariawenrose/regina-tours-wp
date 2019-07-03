@@ -1,6 +1,13 @@
 <?php get_header();?>
 
+<header>
+    <div id="custom-header">
+      <img class="header-img img-fluid src="<?php header_image();?>" alt=""/>
+    </div>
+</header>
+
 <div class="container-fluid">
+
         
   <?php
     $args = array(
@@ -12,28 +19,26 @@
   ?>
 
   <?php if( $allServices->have_posts() ): ?>
-    <div class="row mb-3">
-      <?php while( $allServices->have_posts() ): $allServices->the_post(); ?>
-        <div class="col">
-          <div class="card card-cascade narrower">
-            <div class="card-body card-body-cascade">
-              <div class="view wiew-cascade overlay">
+      <div class="row mt-5 mb-3">
+        <?php while( $allServices->have_posts() ): $allServices->the_post(); ?>
+          <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card card-cascade narrower">
+              <div class="view view-cascade overlay">
                 <?php if(has_post_thumbnail()): ?>
-                <?php the_post_thumbnail('medium', ['class'=>'serive-image card-img-top img-fluid mb-2', 'alt' =>'thumbnail image for the post']); ?>
+                <?php the_post_thumbnail('medium_large', ['class'=>'service-image card-img-top img-fluid', 'alt' =>'thumbnail image for the post']); ?>
                 <?php endif; ?>
               </div>
-              <h3 class="card-title"><?php the_title(); ?></h3>
-              <div class="card-text">
-                <?php the_content();?>
+              <div class="card-body card-body-cascade">
+                <h3 class="card-title"><?php the_title(); ?></h3>
+                <div class="card-text">
+                  <?php the_content();?>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <?php endwhile; ?>
-    </div>
-  <?php endif; ?>
-
-
+        <?php endwhile; ?>
+      </div>
+    <?php endif; ?>
 
 
     
@@ -243,3 +248,5 @@
     
   </div>
 </div>
+
+<?php get_footer();?>

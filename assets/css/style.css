@@ -8,23 +8,9 @@ h1 {
   color: #3abb3a;
 }
 
-#ft-img {
-  height: 350px;
-  background-color: aquamarine;
-}
-
 #custom-header {
   height: 350px;
   width: auto;
-}
-
-.header-img {
-  height: 100%;
-  width: 100%;
-}
-
-.service-image {
-  max-height: 450px;
 }
 
 /*# sourceMappingURL=style.css.map */

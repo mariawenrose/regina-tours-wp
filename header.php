@@ -27,6 +27,7 @@
       'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
       'walker'            => new WP_Bootstrap_Navwalker(),
     ) );
+    
     ?>
       <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
@@ -44,11 +45,7 @@
 </nav>
  
 
-  <header>
-    <div id="custom-header">
-      <img class="header-img img-fluid" src="<?php header_image();?>" alt=""/>
-    </div>
-  </header>
+
 
 
 

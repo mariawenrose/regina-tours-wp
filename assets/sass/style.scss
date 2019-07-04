@@ -4,27 +4,33 @@
   box-sizing: border-box;
 }
 
-$primaryColour: rgb(127, 199, 127);
+$primaryColour: rgb(41, 131, 41);
 
 h1 {
   color: $primaryColour;
 }
 
 
+.header-container {
+  position: relative;
+  display: block;
+  height: 320px;
+  width: 100%;
+}
 // #ft-img {
 //   height: 350px;
 //   background-color: aquamarine;
 // }
 
-// #custom-header {
-//   background: url() no-repeat center center fixed;
-//   background-size: cover;
+// #header-img {
+//  width: 100%;
+
 // }
 
-#custom-header {
-  height: 350px;
-  width: auto;
-}
+// #custom-header {
+//   max-height: 350px;
+//   width: auto;
+// }
 
 // .header-img {
 //   height: 100%;
@@ -63,7 +69,7 @@ h1 {
 
 @media only screen and (max-width: 768px) {
   .custom-card-image {
-  display: none;
+    display: none;
   }
   .blog-post-text {
     width: 95%;

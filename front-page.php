@@ -1,13 +1,16 @@
 <?php get_header();?>
 
-<header>
-  <div id="custom-header">
-    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-  </div>
-</header>
 
 
 <div class="container-fluid">
+
+<div class="row">
+  <div class="col-x 12">
+    <div class="header-container text-container style="background-image: url(<?php header_image(); ?>);">
+      <div class="header-content"></div>
+    </div>
+  </div>
+</div>
 
         
   <?php

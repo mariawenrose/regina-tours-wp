@@ -12,22 +12,35 @@ function theme_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts');
 
 function custom_theme_setup() {
+
+
   add_theme_support('menus');
   add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'video'));
 
   register_nav_menu('top_navigation_bar', 'Custom Top Nav');
+  register_default_headers( $headers );
 }
+
 add_action('init', 'custom_theme_setup');
 add_theme_support( 'custom-logo' );
+// add_theme_support( 'custom-header', $args );
 
-$args = array(
-	'flex-width'    => true,
-	'width'         => 980,
-	'flex-height'    => true,
-	'height'        => 200,
-	'default-image' => get_template_directory_uri() . '/images/header.jpg',
-);
-add_theme_support( 'custom-header', $args );
+
+
+
+// function themename_custom_header_setup() {
+//   $args = array(
+//       'default-image'      => get_template_directory_uri() . 'img/default-image.jpg',
+//       'default-text-color' => '000',
+//       'width'              => 1000,
+//       'height'             => 250,
+//       'flex-width'         => true,
+//       'flex-height'        => true,
+//   )
+//   add_theme_support( 'custom-header', $args );
+// }
+// add_action( 'after_setup_theme', 'themename_custom_header_setup' );
+
 
 
 //Gutenberg Blocks

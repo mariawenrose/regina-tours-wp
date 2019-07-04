@@ -5,12 +5,14 @@
 }
 
 h1 {
-  color: #7fc77f;
+  color: #298329;
 }
 
-#custom-header {
-  height: 350px;
-  width: auto;
+.header-container {
+  position: relative;
+  display: block;
+  height: 320px;
+  width: 100%;
 }
 
 .custom-card-image {

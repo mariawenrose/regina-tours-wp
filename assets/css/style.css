@@ -5,12 +5,47 @@
 }
 
 h1 {
-  color: #3abb3a;
+  color: #7fc77f;
 }
 
 #custom-header {
   height: 350px;
   width: auto;
+}
+
+.custom-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 30%;
+  height: auto;
+}
+
+.blog-post-image {
+  width: 50%;
+  height: auto;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.blog-post-text {
+  width: 67%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-card-image {
+    display: none;
+  }
+
+  .blog-post-text {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

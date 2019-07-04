@@ -1,10 +1,11 @@
 <?php get_header();?>
 
 <header>
-    <div id="custom-header">
-      <img class="header-img img-fluid src="<?php header_image();?>" alt=""/>
-    </div>
+  <div id="custom-header">
+    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+  </div>
 </header>
+
 
 <div class="container-fluid">
 
@@ -21,11 +22,11 @@
   <?php if( $allServices->have_posts() ): ?>
       <div class="row mt-5 mb-3">
         <?php while( $allServices->have_posts() ): $allServices->the_post(); ?>
-          <div class="col-md-4 d-flex align-items-stretch">
+          <div class="col-md-4 mb-3 d-flex align-items-stretch">
             <div class="card card-cascade narrower">
               <div class="view view-cascade overlay">
                 <?php if(has_post_thumbnail()): ?>
-                <?php the_post_thumbnail('medium_large', ['class'=>'service-image card-img-top img-fluid', 'alt' =>'thumbnail image for the post']); ?>
+                <?php the_post_thumbnail('medium_large', ['class'=>'service-image card-img-top img-fluid', 'alt' =>'Regina Tours Israel service post feature image']); ?>
                 <?php endif; ?>
               </div>
               <div class="card-body card-body-cascade">
@@ -40,70 +41,63 @@
       </div>
     <?php endif; ?>
 
+<!-- Testimononial Section Starts -->
+           
+  <?php
+    $args = array(
+        'post_type' => 'testimonial',
+        'posts_per_page' => 1,
 
+    );
+    $singleTestimonial = new WP_Query($args);
+  ?>
+
+<?php if( $singleTestimonial->have_posts() ): ?>
+      <div class="section mb-3">
+        <?php while( $singleTestimonial->have_posts() ): $singleTestimonial->the_post(); ?>
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title"><?php the_title(); ?></h3>
+                <div class="card-text">
+                  <?php the_content();?>
+                </div>
+              </div>
+            </div>
+        <?php endwhile; ?>
+      </div>
+    <?php endif; ?>
+
+<!-- Testimonial Section Ends -->
     
-    <!-- Testimononial Section Starts -->
-    <div class="section">
-      <!-- <div id="ft-img" class="section container-fluid"></div> -->
-    </div>
+<!-- Blog Posts Section Starts -->
+    <?php 
+        $args = array (
+          'post_type' => 'blogPost',
+          'posts_per_page' => 3,
+        );
+        $singleBlogPost = new WP_Query($args);
+      ?>
 
-    <div class="section">
-      <div class="card">
-        <div class="card-body">
-          <h3>Testimonial</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum neque magni fugiat repellat, adipisci obcaecati ad saepe in nisi architecto temporibus aliquid facilis voluptatem aperiam deleniti, provident non corrupti maiores.
-        </p>
-      </div>
-      </div>
-    </div>
-    <!-- Testimonial Section Ends -->
-    
-    <!-- Packages Section Starts -->
-    <div class="section">
-      <div class="card d-flex flex-row">
-        <div class="package-image">
-          yep test
+      <?php if ( $singleBlogPost->have_posts() ): ?>
+        <div class="section mt-5">
+          <?php while ($singleBlogPost ->have_posts() ): $singleBlogPost->the_post(); ?>
+          <div id="blog-card" class="card d-flex flex-row mb-3">
+            <div class="custom-card-image">
+            <?php if(has_post_thumbnail()): ?>
+              <?php the_post_thumbnail('medium_large', ['class'=>'blog-post-image', 'alt' =>'Regina Tours Israel blog post feature image']); ?>
+            <?php endif; ?>
+            </div>
+            <div class="blog-post-text">
+              <h3 class="card-title mt-2"><?php the_title();?></h3>
+              <div class="card-text">
+                <?php the_content();?>
+              </div>
+            </div>
+          </div>
+          <?php endwhile; ?>
         </div>
-        <div class="package-text">
-          <h3>
-            Package #1
-          </h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora dolor omnis tempore minus alias ab quaerat, nesciunt error quam. Earum perferendis laudantium facilis porro sint eum ipsum fugiat, mollitia dolore.
-          </p>
-        </div>
-      </div>
-
-      <div class="card card d-flex flex-row">
-        <div class="package-image">
-          yep test
-        </div>
-        <div class="package-text">
-          <h3>
-            Package #2
-          </h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, expedita. Ea fuga placeat cum commodi dolor libero in nulla aliquid! Similique labore iste, fugiat eum facere ipsam praesentium exercitationem quidem.
-          </p>
-        </div>
-      </div>
-
-      <div class="card card d-flex flex-row">
-        <div class="package-image">
-          yep test
-        </div>
-        <div class="package-text">
-          <h3>
-            Package #3
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quaerat quas minus commodi deleniti, consectetur sit numquam tempora! Quasi asperiores totam, ad dolorum molestiae autem impedit rem velit magnam corrupti!
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Packages Section Ends -->
+      <?php endif; ?>
+<!-- Packages Section Ends -->
 
     <!-- Contact Form Starts -->
     <div class="section">

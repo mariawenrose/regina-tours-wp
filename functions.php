@@ -19,7 +19,16 @@ function custom_theme_setup() {
 }
 add_action('init', 'custom_theme_setup');
 add_theme_support( 'custom-logo' );
-add_theme_support('custom-header');
+
+$args = array(
+	'flex-width'    => true,
+	'width'         => 980,
+	'flex-height'    => true,
+	'height'        => 200,
+	'default-image' => get_template_directory_uri() . '/images/header.jpg',
+);
+add_theme_support( 'custom-header', $args );
+
 
 //Gutenberg Blocks
 add_theme_support( 'wp-block-styles' );
@@ -30,5 +39,7 @@ require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 //Custom Post Types
 require get_template_directory() . '/inc/custom-post-types/cpt-services.php';
 require get_template_directory() . '/inc/custom-post-types/cpt-testimonials.php';
+require get_template_directory() . '/inc/custom-post-types/cpt-blog-post.php';
+
 require get_template_directory() . '/inc/customizer.php';
 

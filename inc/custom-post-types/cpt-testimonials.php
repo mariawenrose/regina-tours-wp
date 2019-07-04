@@ -17,12 +17,12 @@ function add_testimonial_post_type(){
 		'not_found_in_trash' 		=> __( 'No testimonial found in Trash.', 'Regina Tours Israel' )
 	);
     $args = array(
-        'labels' 						=> $labels,
-        'description' 			=> 'A list of testimonial which will be held',
-        'public' 						=> true,
-        'show_in_nav_menus' => false,
-        'menu_position' 		=> 5,
-        'show_in_rest' 			=> true,
+        'labels' 					=> $labels,
+        'description' 				=> 'A list of testimonial which will be held',
+        'public' 					=> true,
+        'show_in_nav_menus'			=> false,
+        'menu_position' 			=> 5,
+        'show_in_rest' 				=> true,
         'menu_icon' 				=> 'dashicons-admin-post',
         'supports' 					=> array('title', 'editor')
     );

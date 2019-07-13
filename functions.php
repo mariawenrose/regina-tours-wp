@@ -23,7 +23,7 @@ function custom_theme_setup() {
 
 add_action('init', 'custom_theme_setup');
 add_theme_support( 'custom-logo' );
-// add_theme_support( 'custom-header', $args );
+add_theme_support( 'custom-header', $args );
 
 
 

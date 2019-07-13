@@ -22,6 +22,10 @@ function mytheme_customize_register( $wp_customize ) {
   ) ) );
 
 
+  // ===================
+  // header 
+  // ===================
+
   $wp_customize->add_section( 'header_styles_section' , array(
     'title'      => __( 'Custom Header Styles', 'RTTheme' ),
     'priority'   => 30,

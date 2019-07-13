@@ -3,15 +3,18 @@
   Template Name: Testimonial Page
 */
 get_header();?>
-<div class="container">
+<div class="container c-vh">
 
-<div class="row">
+<div class="page-heading ">
+  <h1 class="mt-5 mb-5 text-center">Customer Testimonials</h1>
+</div>
+
+  <div class="row">
 
 
 <?php
     $args = array(
         'post_type' => 'testimonial',
-        'posts_per_page' => 1,
 
     );
     $singleTestimonial = new WP_Query($args);
@@ -20,7 +23,7 @@ get_header();?>
 <?php if( $singleTestimonial->have_posts() ): ?>
       <div class="section mb-3 ">
         <?php while( $singleTestimonial->have_posts() ): $singleTestimonial->the_post(); ?>
-            <div class="card">
+            <div class="card mb-5">
               <div class="card-body">
                 <h3 class="card-title"><?php the_title(); ?></h3>
                 <div class="card-text">
@@ -31,5 +34,8 @@ get_header();?>
         <?php endwhile; ?>
       </div>
     <?php endif; ?>
+
+  </div>
+</div>
 
 <?php get_footer();?>

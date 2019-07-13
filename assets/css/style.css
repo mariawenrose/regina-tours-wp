@@ -4,10 +4,27 @@
   box-sizing: border-box;
 }
 
+/* ------------------------------
+TEXT
+------------------------------ */
+@font-face {
+  font-family: 'Adobe Hebrew';
+  src: url("/assets/font/AdobeHebrew.otf") format "opentype";
+  font-weight: 400;
+  font-style: bold;
+}
 h1 {
-  color: #298329;
+  color: #4a9e4a;
 }
 
+h2 {
+  color: red;
+  font-family: 'Adobe Hebrew';
+}
+
+/* ------------------------------
+HEADER???
+------------------------------ */
 .header-container {
   position: relative;
   display: block;
@@ -15,6 +32,9 @@ h1 {
   width: 100%;
 }
 
+/* ------------------------------
+BLOG CARDS
+------------------------------ */
 .custom-card-image {
   display: flex;
   justify-content: center;

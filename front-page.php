@@ -12,6 +12,7 @@
   </div>
 </div>
 
+
         
   <?php
     $args = array(
@@ -21,6 +22,11 @@
     );
     $allServices = new WP_Query($args);
   ?>
+
+<!-- <div class="services-heading row">
+  <h2 class="text-center">Services</h2>
+</div> -->
+
 
   <?php if( $allServices->have_posts() ): ?>
       <div class="row mt-5 mb-3">

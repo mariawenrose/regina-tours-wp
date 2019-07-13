@@ -11,11 +11,9 @@
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark custom_nav" role="navigation">
   <div class="container">
-  <!-- Brand and toggle get grouped for better mobile display -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
     <?php
     wp_nav_menu( array(
       'theme_location'    => 'top_navigation_bar',
@@ -32,12 +30,12 @@
       <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
         <a class="nav-link waves-effect waves-light">
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook"></i>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link waves-effect waves-light">
-          <i class="fab fa-google-plus-g"></i>
+          <i class="fab fa-instagram"></i>
         </a>
       </li>
     </ul>

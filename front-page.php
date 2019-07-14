@@ -6,7 +6,8 @@
 
 <div class="row">
   <div class="col-x 12">
-    <div class="header-container text-container style="background-image: url(<?php header_image(); ?>);">
+    <div class="header-container text-container style="background-image: url(<?php header_image(); ?>);>
+    <?php var_dump (header_image())?>
       <div class="header-content"></div>
     </div>
   </div>
@@ -199,20 +200,20 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-lg-4">
+          <div id="form-block" class="col-lg-4">
 
             <div class="card-body contact text-center h-100 white-text">
 
               <h3 class="my-4 pb-2">Contact information</h3>
               <ul class="text-lg-left list-unstyled ml-4">
                 <li>
-                  <p><i class="fas fa-map-marker-alt pr-2"></i>New York, 94126, USA</p>
+                  <p><i class="fas fa-map-marker-alt pr-2"></i>Jerusalem, Israel</p>
                 </li>
                 <li>
                   <p><i class="fas fa-phone pr-2"></i>+ 01 234 567 89</p>
                 </li>
                 <li>
-                  <p><i class="fas fa-envelope pr-2"></i>contact@example.com</p>
+                  <p><i class="fas fa-envelope pr-2"></i>rgtours@example.com</p>
                 </li>
               </ul>
               <hr class="hr-light my-4">

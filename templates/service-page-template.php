@@ -5,13 +5,16 @@
 get_header();?>
 <div class="container">
 
+<div class="page-heading ">
+  <h1 class="mt-5 mb-5 text-center">Services</h1>
+</div>
+
 <div class="row">
 
 
 <?php
     $args = array(
         'post_type' => 'services'
-        // 'category_name' => 'services',
     );
     $allServices = new WP_Query($args);
   ?>
@@ -19,7 +22,7 @@ get_header();?>
   <?php if( $allServices->have_posts() ): ?>
     <div class="row mt-5 mb-3">
       <?php while( $allServices->have_posts() ): $allServices->the_post(); ?>
-        <div class="col-md-4 d-flex align-items-stretch">
+        <div class="col-md-4 mb-4 d-flex align-items-stretch">
           <div class="card card-cascade narrower">
             <div class="view view-cascade overlay">
               <?php if(has_post_thumbnail()): ?>

@@ -8,18 +8,18 @@
 TEXT
 ------------------------------ */
 @font-face {
-  font-family: 'Adobe Hebrew';
+  font-family: "Adobe Hebrew";
   src: url("/assets/font/AdobeHebrew.otf") format "opentype";
   font-weight: 400;
   font-style: bold;
 }
 h1 {
-  color: #4a9e4a;
-}
-
-h2 {
-  color: red;
-  font-family: 'Adobe Hebrew';
+  font-family: "Adobe Hebrew";
+  color: #080808;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: bold;
+  border-bottom: 1px solid #080808;
 }
 
 /* ------------------------------

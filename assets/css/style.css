@@ -30,11 +30,21 @@ HEADER???
   display: block;
   height: 320px;
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#our-story-header {
+  max-height: 620px;
 }
 
 /* ------------------------------
 BLOG CARDS
 ------------------------------ */
+#blog-card {
+  border-radius: 5px;
+}
+
 .custom-card-image {
   display: flex;
   justify-content: center;
@@ -42,6 +52,7 @@ BLOG CARDS
   overflow: hidden;
   width: 30%;
   height: auto;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .blog-post-image {

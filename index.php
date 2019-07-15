@@ -1,9 +1,4 @@
 <?php get_header(); ?>
-
-<!-- <div class="row">
-  <div class="col-xs-12">
-  </div>
-  <div class="col-xs-12"> -->
      <?php 
     
     if( have_posts() ):

@@ -18,7 +18,7 @@ function add_testimonial_post_type(){
 	);
     $args = array(
         'labels' 					=> $labels,
-        'description' 				=> 'A list of testimonial which will be held',
+        'description' 				=> 'Testimonial Formats',
         'public' 					=> true,
         'show_in_nav_menus'			=> false,
         'menu_position' 			=> 5,

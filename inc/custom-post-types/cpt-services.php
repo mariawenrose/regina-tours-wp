@@ -18,7 +18,7 @@ function add_services_post_type(){
 	);
     $args = array(
         'labels' 					=> $labels,
-        'description' 				=> 'A list of services which will be held',
+        'description' 				=> 'Services Post Format',
         'public' 					=> true,
         'show_in_nav_menus' 		=> false,
         'menu_position' 			=> 6,

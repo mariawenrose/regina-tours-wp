@@ -38,38 +38,22 @@ HEADER???
   display: block;
   height: 320px;
   width: 100%;
+  background-size: cover;  
+  background-repeat: no-repeat;
 }
-// #ft-img {
-//   height: 350px;
-//   background-color: aquamarine;
-// }
 
-// #header-img {
-//  width: 100%;
-
-// }
-
-// #custom-header {
-//   max-height: 350px;
-//   width: auto;
-// }
-
-// .header-img {
-//   height: 100%;
-//   width: 100%;
-// }
-
-// .service-image {
-//  max-height: 450px;
-// }
-
-// background: url(/img/background.jpg) no-repeat center center fixed;
-// background-size: cover;
+#our-story-header {
+  max-height: 620px;
+}
 
 
 /* ------------------------------
 BLOG CARDS
 ------------------------------ */
+
+#blog-card {
+  border-radius: 5px;
+}
 
 .custom-card-image {
   display: flex;
@@ -78,6 +62,7 @@ BLOG CARDS
   overflow: hidden;
   width: 30%;
   height: auto;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .blog-post-image {

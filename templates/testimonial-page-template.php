@@ -34,8 +34,12 @@ get_header();?>
         <?php endwhile; ?>
       </div>
     <?php endif; ?>
-
   </div>
+</div>
+<div class="page-footer">
+  <footer class="font-small pt-4">
+    <p class="text-center">Regina Tours Wordpress Theme 2019</p>
+  </footer>
 </div>
 
 <?php get_footer();?>

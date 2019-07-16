@@ -3,10 +3,7 @@
 
 <div class="row">
   <div class="col-12">
-    <div class="header-container text-container" style="background-image: url(<?php header_image(); ?>);">
-  
-      <div class="header-content"></div>
-    </div>
+    <div class="header-container text-container" style="background-image: url(<?php header_image(); ?>);"></div>
   </div>
 </div>
       
@@ -103,7 +100,7 @@
 
 <!-- Contact Form Starts -->
 
-    <section class="mb-4">
+    <div class="mt-4">
 
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
     <p class="text-center w-responsive mx-auto mb-5">
@@ -171,11 +168,12 @@
         </ul>
       </div>
     </div>
-
-    </section>
+    </div>
 <!-- Contact Form Ends -->
     
   </div>
-</div>
+
+
 
 <?php get_footer();?>
+

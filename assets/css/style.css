@@ -12,13 +12,13 @@
 TEXT
 ------------------------------ */
 @font-face {
-  font-family: 'Adobe Hebrew';
+  font-family: "Adobe Hebrew";
   src: url("/assets/font/AdobeHebrew.otf") format "opentype";
   font-weight: 400;
   font-style: bold;
 }
 h1 {
-  font-family: 'Adobe Hebrew';
+  font-family: "Adobe Hebrew";
   color: #080808;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -75,6 +75,17 @@ BLOG CARDS
   width: 67%;
   margin-left: 1.5%;
   margin-right: 1.5%;
+}
+
+/* ------------------------------
+FOOTER
+------------------------------ */
+.page-footer {
+  background-color: #E8E8E8;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
 }
 
 @media only screen and (max-width: 768px) {

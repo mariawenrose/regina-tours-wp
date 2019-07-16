@@ -26,31 +26,21 @@ function mytheme_customize_register( $wp_customize ) {
   // header 
   // ===================
 
-  $wp_customize->add_section( 'header_styles_section' , array(
-    'title'      => __( 'Custom Header Styles', 'RTTheme' ),
+  $wp_customize->add_section( 'header_logo_section' , array(
+    'title'      => __( 'Upload Logo', 'RTTheme' ),
     'priority'   => 30,
   ) );
 
-  $wp_customize->add_setting( 'custom_header_image' , array(
+  $wp_customize->add_setting( 'header_logo_setting' , array(
     'transport' => 'refresh',
 ) );
 
-$wp_customize->add_control(new WP_Customize_Image_Control( $wp_customize, 'header_image_control', array(
-	'label'      => __( 'Header Background Color', 'RTTheme' ),
-	'section'    => 'header_styles_section',
-	'settings'   => 'custom_header_image',
+$wp_customize->add_control(new WP_Customize_Image_Control( $wp_customize, 'header_logo_control', array(
+	'label'      => __( 'Custom Logo', 'RTTheme' ),
+	'section'    => 'header_logo_section',
+	'settings'   => 'header_logo_setting',
 ) ) );
 
-$wp_customize->add_setting( 'header_background_colour' , array(
-  'default'   => '#000000',
-  'transport' => 'refresh',
-) );
-
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_background_colour_control', array(
-	'label'      => __( 'Header Background Color', 'RTTheme' ),
-	'section'    => 'header_styles_section',
-	'settings'   => 'header_background_colour',
-) ) );
 
 
 }

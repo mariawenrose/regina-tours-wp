@@ -47,6 +47,19 @@ get_header();?>
 
     <div class="row">
 
+      <div class="col-12 col-md-6">
+        <h3 class="text-center">Our Vision</h3>
+        <p>
+         Chalk and cheese fondue blue castello. Edam camembert de normandie halloumi camembert de normandie who moved my cheese bavarian bergkase gouda st. agur blue cheese. Caerphilly manchego monterey jack taleggio fondue chalk and cheese cheese on toast pepper jack.
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <h3 class="text-center">Our Mission</h3>
+        <p>
+         Chalk and cheese fondue blue castello. Edam camembert de normandie halloumi camembert de normandie who moved my cheese bavarian bergkase gouda st. agur blue cheese. Caerphilly manchego monterey jack taleggio fondue chalk and cheese cheese on toast pepper jack.
+        </p>
+      </div>
 
     </div>
 

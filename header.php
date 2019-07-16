@@ -13,6 +13,14 @@
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark custom_nav" role="navigation">
   <div class="container">
+  <a class="navbar-brand" href="front-page.php">
+    <?php
+      if  (get_theme_mod( 'header_logo_setting' )):
+    ?>
+   <img id="custom-logo" src="<?php echo get_theme_mod( 'header_logo_setting' );?>"/> 
+      <?php endif;?>
+  </a>
+				
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

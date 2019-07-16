@@ -19,6 +19,7 @@ get_header();?>
     $allServices = new WP_Query($args);
   ?>
 
+
   <?php if( $allServices->have_posts() ): ?>
     <div class="row mt-5 mb-3">
       <?php while( $allServices->have_posts() ): $allServices->the_post(); ?>

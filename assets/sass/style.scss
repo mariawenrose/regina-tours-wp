@@ -16,7 +16,7 @@ TEXT
 }
 
 
-$primaryColour: rgb(74, 158, 74);
+$primaryColour: rgb(69, 117, 69);
 
 h1 {
   font-family: 'Adobe Hebrew';
@@ -46,6 +46,9 @@ HEADER???
   max-height: 620px;
 }
 
+#custom-logo {
+  height: 50px;
+}
 
 /* ------------------------------
 BLOG CARDS

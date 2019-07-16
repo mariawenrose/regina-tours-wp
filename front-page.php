@@ -73,15 +73,15 @@
 
     <?php 
         $args = array (
-          'post_type' => 'blogPost',
+          'post_type' => 'package',
           'posts_per_page' => 3,
         );
-        $singleBlogPost = new WP_Query($args);
+        $singlePackage = new WP_Query($args);
       ?>
 
-      <?php if ( $singleBlogPost->have_posts() ): ?>
+      <?php if ( $singlePackage->have_posts() ): ?>
         <div class="section mt-5">
-          <?php while ($singleBlogPost ->have_posts() ): $singleBlogPost->the_post(); ?>
+          <?php while ($singlePackage ->have_posts() ): $singlePackage->the_post(); ?>
           <div id="blog-card" class="card d-flex flex-row mb-3">
             <div class="custom-card-image">
             <?php if(has_post_thumbnail()): ?>

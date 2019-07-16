@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+#site-container {
+  height: 100vh;
+}
+
 /* ------------------------------
 TEXT
 ------------------------------ */
@@ -23,7 +27,7 @@ h1 {
 }
 
 /* ------------------------------
-HEADER???
+HEADER
 ------------------------------ */
 .header-container {
   position: relative;

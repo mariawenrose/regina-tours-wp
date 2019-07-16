@@ -9,16 +9,16 @@ get_header();?>
 
 <?php
     $args = array(
-        'post_type' => 'story_header',
+        'post_type' => 'large_image',
         'posts_per_page' => 1,
 
     );
-    $pageHeader = new WP_Query($args);
+    $largeImage = new WP_Query($args);
   ?>
 
-<?php if( $pageHeader->have_posts() ): ?>
+<?php if( $largeImage->have_posts() ): ?>
       <div class="row">
-        <?php while( $pageHeader->have_posts() ): $pageHeader->the_post(); ?>
+        <?php while( $largeImage->have_posts() ): $largeImage->the_post(); ?>
             <div id="our-story-header" class="card card-cascade wider reverse">
               <div class="view view-cascade overlay">
                 <?php if(has_post_thumbnail()): ?>
@@ -44,7 +44,7 @@ get_header();?>
       $storyContent= new WP_Query($args);
     ?>
 
-
+<!-- 
     <div class="row">
 
       <div class="col-12 col-md-6">
@@ -61,7 +61,7 @@ get_header();?>
         </p>
       </div>
 
-    </div>
+    </div> -->
 
 
 </div>

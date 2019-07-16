@@ -10,7 +10,6 @@
 </head>
 <body <?php body_class();?>>
 
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark custom_nav" role="navigation">
   <div class="container">
   <a class="navbar-brand" href="front-page.php">

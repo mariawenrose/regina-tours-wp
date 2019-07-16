@@ -31,12 +31,11 @@ add_theme_support('post-thumbnails');
 //Custom Post Types
 require get_template_directory() . '/inc/custom-post-types/cpt-services.php';
 require get_template_directory() . '/inc/custom-post-types/cpt-testimonials.php';
-require get_template_directory() . '/inc/custom-post-types/cpt-blog-post.php';
-require get_template_directory() . '/inc/custom-post-types/cpt-our-story-header.php';
+require get_template_directory() . '/inc/custom-post-types/cpt-package-post.php';
+require get_template_directory() . '/inc/custom-post-types/cpt-large-image-post-type.php';
 
 //Custom Inc
 require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/custom_fields.php';
 
 

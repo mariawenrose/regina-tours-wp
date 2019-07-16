@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+#site-container {
+  height: 100vh;
+}
+
 /* ------------------------------
 TEXT
 ------------------------------ */
@@ -16,8 +20,6 @@ TEXT
 }
 
 
-$primaryColour: rgb(69, 117, 69);
-
 h1 {
   font-family: 'Adobe Hebrew';
   color: rgb(8, 8, 8);
@@ -29,7 +31,7 @@ h1 {
 
 
 /* ------------------------------
-HEADER???
+HEADER
 ------------------------------ */
 
 
@@ -94,9 +96,3 @@ BLOG CARDS
   }
 }
 
-// Safari Form
-// @media only screen and (min-width: 768px) {
-//   #form-block{
-//     display: none;
-//   }
-// }
